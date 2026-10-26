@@ -30,7 +30,8 @@ function AnimatedRoutes() {
 
 export default function App() {
   return (
-    <Router>
+    // basename added for GitHub Pages routing
+    <Router basename="/DPP.my/">
       <Navbar />
       <AnimatedRoutes />
     </Router>
