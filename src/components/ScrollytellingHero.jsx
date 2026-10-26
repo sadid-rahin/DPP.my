@@ -48,9 +48,9 @@ export default function ScrollytellingHero() {
           <div className="relative w-[250px] h-[250px] flex items-center justify-center -mb-8">
             <div className="absolute -inset-3 rounded-3xl border border-accent/20 animate-pulse-slow pointer-events-none" />
             
-            {/* Replaced 3D iframe with Vault MP4 Video */}
+            {/* Updated path for Vault MP4 Video */}
             <video 
-              src="/public/assets/vault.webm" 
+              src={`${import.meta.env.BASE_URL}assets/vault.webm`}
               autoPlay 
               loop 
               muted 
@@ -66,10 +66,10 @@ export default function ScrollytellingHero() {
         <motion.div style={{ x: maleX }} className="absolute bottom-[18vh] left-0 z-10">
           <div className="-translate-x-1/2 flex flex-col items-center">
             
-            {/* Replaced 3D iframe with Male MP4 Video */}
+            {/* Updated path for Male MP4 Video */}
             <div className="w-[180px] h-[300px] -mb-10 flex justify-center items-end">
               <video 
-                src="/public/assets/male.webm" 
+                src={`${import.meta.env.BASE_URL}assets/male.webm`}
                 autoPlay 
                 loop 
                 muted 
@@ -86,10 +86,10 @@ export default function ScrollytellingHero() {
         <motion.div style={{ x: femaleX }} className="absolute bottom-[18vh] left-0 z-10">
           <div className="-translate-x-1/2 flex flex-col items-center">
             
-            {/* Replaced 3D iframe with Female MP4 Video */}
+            {/* Updated path for Female MP4 Video */}
             <div className="w-[480px] h-[300px] -mb-10 flex justify-center items-end">
               <video 
-                src="/public/assets/female.webm" 
+                src={`${import.meta.env.BASE_URL}assets/female.webm`}
                 autoPlay 
                 loop 
                 muted 
