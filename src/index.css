@@ -1,0 +1,30 @@
+/* 1. Standard Tailwind v4 import */
+@import "tailwindcss";
+
+/* 2. Define your custom theme directly in CSS (Tailwind v4 standard) */
+@theme {
+  --color-dark: #0f172a;
+  --color-accent: #2dd4bf;
+  --color-gold: #fbbf24;
+  --color-ink: #05070f;
+  
+  /* Creates the bg-cyber-pattern class */
+  --background-image-cyber-pattern: linear-gradient(to bottom, rgba(15, 23, 42, 0.94), rgba(5, 7, 15, 0.92)), url('/assets/bg-pattern-8k.jpg');
+}
+
+/* 3. Global Body Styles */
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  color: #cbd5e1;
+  
+  
+  /* Now bg-dark and bg-cyber-pattern will work perfectly */
+  @apply  bg-dark bg-cyber-pattern bg-cover bg-center bg-fixed bg-no-repeat overflow-x-hidden relative;
+}
+
+/* 4. Glassmorphism utilities */
+.backdrop-blur-custom {
+  backdrop-filter: blur(20px);
+  background: rgba(15, 23, 42, 0.72);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
