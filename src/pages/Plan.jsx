@@ -10,17 +10,17 @@ export default function Plan() {
       <SectionHeading accent="Subscriptions" className="mb-4">
         SaaS
       </SectionHeading>
-      <p className="text-center text-slate-400 text-base md:text-lg max-w-2xl mx-auto mb-16">
+      <p className="text-center text-slate-400 text-sm sm:text-base md:text-lg max-w-2xl mx-auto mb-10 sm:mb-16 px-4">
         Scalable cryptographic protection and automated monetization tiers tailored for every stage of creative production.
       </p>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch max-w-6xl mx-auto">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8 items-stretch max-w-lg lg:max-w-6xl mx-auto">
         {/* Tier 1: Free ($0/mo) */}
         <Reveal delay={0} className="h-full">
           <motion.div
             whileHover={{ y: -8 }}
             transition={{ type: "spring", stiffness: 300, damping: 20 }}
-            className="relative h-full flex flex-col justify-between overflow-hidden bg-white/[0.04] backdrop-blur-xl p-8 rounded-3xl border border-white/10 hover:border-accent/60 hover:shadow-[0_20px_60px_-15px_rgba(45,212,191,0.35)] transition-[border-color,box-shadow] duration-300"
+            className="relative h-full flex flex-col justify-between overflow-hidden bg-white/[0.04] backdrop-blur-xl p-6 sm:p-8 rounded-2xl sm:rounded-3xl border border-white/10 hover:border-accent/60 hover:shadow-[0_20px_60px_-15px_rgba(45,212,191,0.35)] transition-[border-color,box-shadow] duration-300"
           >
             <div>
               <div className="flex items-center justify-between mb-4">
@@ -34,7 +34,7 @@ export default function Plan() {
               <p className="text-sm text-slate-400 mb-6">For independent creators.</p>
 
               <div className="mb-8">
-                <span className="text-5xl font-extrabold text-white tracking-tight">$0</span>
+                <span className="text-4xl sm:text-5xl font-extrabold text-white tracking-tight">$0</span>
                 <span className="text-sm text-slate-400 font-normal">/mo</span>
               </div>
 
@@ -65,12 +65,12 @@ export default function Plan() {
         </Reveal>
 
         {/* Tier 2: Pro ($49/mo) - "Most Popular" highlighted tier */}
-        <div className="md:-translate-y-4 h-full">
+        <div className="lg:-translate-y-4 h-full">
           <Reveal delay={0.12} className="h-full">
             <motion.div
               whileHover={{ y: -8 }}
               transition={{ type: "spring", stiffness: 300, damping: 20 }}
-              className="relative h-full flex flex-col justify-between overflow-hidden bg-slate-950/90 backdrop-blur-xl p-8 rounded-3xl border-2 border-accent shadow-[0_0_40px_rgba(45,212,191,0.25)] hover:shadow-[0_0_60px_rgba(45,212,191,0.4)] transition-[border-color,box-shadow] duration-300"
+              className="relative h-full flex flex-col justify-between overflow-hidden bg-slate-950/90 backdrop-blur-xl p-6 sm:p-8 rounded-2xl sm:rounded-3xl border-2 border-accent shadow-[0_0_40px_rgba(45,212,191,0.25)] hover:shadow-[0_0_60px_rgba(45,212,191,0.4)] transition-[border-color,box-shadow] duration-300"
             >
               {/* Top accent highlight line */}
               <div className="absolute inset-x-8 top-0 h-px bg-gradient-to-r from-transparent via-accent to-transparent" />
@@ -87,7 +87,7 @@ export default function Plan() {
                 <p className="text-sm text-slate-400 mb-6">For high-volume professionals.</p>
 
                 <div className="mb-8">
-                  <span className="text-5xl font-extrabold text-white tracking-tight">$49</span>
+                  <span className="text-4xl sm:text-5xl font-extrabold text-white tracking-tight">$49</span>
                   <span className="text-sm text-slate-400 font-normal">/mo</span>
                 </div>
 
@@ -127,15 +127,15 @@ export default function Plan() {
         <Reveal delay={0.24} className="h-full">
           <div className="relative group h-full">
             {/* Spinning gold gradient halo */}
-            <div className="absolute -inset-[2px] rounded-[26px] overflow-hidden">
+            <div className="absolute -inset-[2px] rounded-[24px] sm:rounded-[26px] overflow-hidden">
               <div className="absolute -inset-[60%] animate-spin-slow bg-[conic-gradient(from_0deg,transparent_0deg,#fbbf24_90deg,transparent_180deg,#fde68a_270deg,transparent_360deg)]" />
             </div>
-            <div className="absolute -inset-4 rounded-[36px] bg-gold/20 blur-2xl opacity-60 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+            <div className="absolute -inset-4 rounded-[32px] sm:rounded-[36px] bg-gold/20 blur-2xl opacity-60 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
 
             <motion.div
               whileHover={{ y: -8 }}
               transition={{ type: "spring", stiffness: 300, damping: 20 }}
-              className="relative h-full flex flex-col justify-between bg-slate-950/90 backdrop-blur-xl p-8 rounded-3xl border border-gold/40 hover:border-gold transition-colors duration-300"
+              className="relative h-full flex flex-col justify-between bg-slate-950/90 backdrop-blur-xl p-6 sm:p-8 rounded-2xl sm:rounded-3xl border border-gold/40 hover:border-gold transition-colors duration-300"
             >
               <div>
                 <div className="flex items-center justify-between mb-4">
@@ -149,7 +149,7 @@ export default function Plan() {
                 <p className="text-sm text-slate-400 mb-6">For agencies & studios.</p>
 
                 <div className="mb-8">
-                  <span className="text-4xl lg:text-5xl font-extrabold text-white tracking-tight">Custom</span>
+                  <span className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight">Custom</span>
                   <span className="text-sm text-slate-400 font-normal"> pricing</span>
                 </div>
 

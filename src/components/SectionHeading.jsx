@@ -8,7 +8,7 @@ export default function SectionHeading({ children, accent, align = 'center', cla
         initial={{ opacity: 0, y: 24, filter: 'blur(8px)' }}
         animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
         transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-        className="text-4xl md:text-6xl font-extrabold tracking-tight text-white"
+        className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-white"
       >
         {children}{' '}
         <span className="bg-gradient-to-r from-accent via-sky-300 to-accent bg-[length:200%_auto] bg-clip-text text-transparent animate-text-shimmer">
@@ -20,7 +20,7 @@ export default function SectionHeading({ children, accent, align = 'center', cla
         animate={{ scaleX: 1 }}
         transition={{ duration: 0.8, delay: 0.25, ease: [0.22, 1, 0.36, 1] }}
         style={{ originX: align === 'center' ? 0.5 : 0 }}
-        className={`mt-5 h-1 w-24 rounded-full bg-gradient-to-r from-accent to-blue-400 ${align === 'center' ? 'mx-auto' : ''}`}
+        className={`mt-3 sm:mt-5 h-1 w-16 sm:w-24 rounded-full bg-gradient-to-r from-accent to-blue-400 ${align === 'center' ? 'mx-auto' : ''}`}
       />
     </div>
   );

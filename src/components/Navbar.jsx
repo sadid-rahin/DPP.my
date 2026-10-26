@@ -1,4 +1,4 @@
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -25,17 +25,21 @@ export default function Navbar() {
         transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
         className="fixed top-4 inset-x-0 z-50 px-4"
       >
-        <div className="max-w-6xl mx-auto h-16 px-5 md:px-6 flex items-center justify-between rounded-2xl bg-white/[0.04] backdrop-blur-xl border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.4)]">
-          <h1 className="text-2xl md:text-3xl font-extrabold tracking-wider bg-gradient-to-r from-accent to-blue-400 bg-clip-text text-transparent">DPP</h1>
+        <div className="max-w-6xl mx-auto h-16 px-4 sm:px-6 flex items-center justify-between rounded-2xl bg-white/[0.04] backdrop-blur-xl border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.4)]">
+          <Link to="/" className="group flex items-center">
+            <h1 className="text-2xl md:text-3xl font-extrabold tracking-wider bg-gradient-to-r from-accent to-blue-400 bg-clip-text text-transparent group-hover:opacity-90 transition-opacity">
+              DPP
+            </h1>
+          </Link>
 
           {/* Desktop Menu */}
-          <div className="hidden md:flex items-center gap-1">
+          <div className="hidden md:flex items-center gap-0.5 lg:gap-1">
             {navLinks.map((link) => (
               <NavLink
                 key={link.name}
                 to={link.path}
                 className={({ isActive }) =>
-                  `relative px-4 py-2 text-sm font-medium rounded-xl transition-colors ${isActive ? 'text-white' : 'text-slate-400 hover:text-white'}`
+                  `relative px-2.5 lg:px-4 py-1.5 lg:py-2 text-xs lg:text-sm font-medium rounded-xl transition-colors ${isActive ? 'text-white' : 'text-slate-400 hover:text-white'}`
                 }
               >
                 {({ isActive }) => (
@@ -75,7 +79,7 @@ export default function Navbar() {
               animate={{ opacity: 1, y: 0, scale: 1 }}
               exit={{ opacity: 0, y: -12, scale: 0.97 }}
               transition={{ duration: 0.25 }}
-              className="md:hidden max-w-6xl mx-auto mt-2 rounded-2xl bg-slate-950/80 backdrop-blur-xl border border-white/10 p-3 space-y-1"
+              className="md:hidden max-w-6xl mx-auto mt-2 rounded-2xl bg-slate-950/90 backdrop-blur-xl border border-white/10 p-3 space-y-1 max-h-[75vh] overflow-y-auto shadow-2xl"
             >
               {navLinks.map((link, i) => (
                 <motion.div

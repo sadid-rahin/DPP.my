@@ -43,7 +43,7 @@ export default function ProblemSolution() {
       <SectionHeading accent="Legal Gap" className="mb-4">
         Bridging the
       </SectionHeading>
-      <p className="text-center text-slate-400 text-base md:text-lg max-w-2xl mx-auto mb-14">
+      <p className="text-center text-slate-400 text-sm sm:text-base md:text-lg max-w-2xl mx-auto mb-10 sm:mb-14 px-4">
         Transforming traditional, slow intellectual property enforcement into transparent cryptographic guarantees.
       </p>
 
@@ -53,10 +53,10 @@ export default function ProblemSolution() {
             <motion.div
               whileHover={{ scale: 1.015 }}
               transition={{ type: "spring", stiffness: 300, damping: 24 }}
-              className="relative flex flex-col md:flex-row gap-5 bg-white/[0.04] backdrop-blur-xl p-6 md:p-8 rounded-3xl border border-white/10 hover:border-accent/50 hover:shadow-[0_0_40px_rgba(45,212,191,0.15)] transition-[border-color,box-shadow] duration-300"
+              className="relative flex flex-col md:flex-row gap-4 sm:gap-5 bg-white/[0.04] backdrop-blur-xl p-5 sm:p-6 md:p-8 rounded-2xl sm:rounded-3xl border border-white/10 hover:border-accent/50 hover:shadow-[0_0_40px_rgba(45,212,191,0.15)] transition-[border-color,box-shadow] duration-300"
             >
               {/* Problem Container */}
-              <div className="flex-1 flex flex-col justify-between text-red-300 bg-gradient-to-br from-red-500/15 to-red-500/5 p-6 rounded-2xl border border-red-500/20">
+              <div className="flex-1 flex flex-col justify-between text-red-300 bg-gradient-to-br from-red-500/15 to-red-500/5 p-4 sm:p-6 rounded-xl sm:rounded-2xl border border-red-500/20">
                 <div>
                   <div className="flex items-center justify-between gap-3 mb-3">
                     <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-red-500/20 text-red-400 border border-red-500/30">
@@ -68,19 +68,26 @@ export default function ProblemSolution() {
                   </div>
 
                   <div className="flex items-start gap-3 mt-2">
-                    <XCircle className="shrink-0 mt-0.5 text-red-400" size={24} />
-                    <h3 className="text-xl font-bold text-red-200 tracking-tight">
+                    <XCircle className="shrink-0 mt-0.5 text-red-400" size={22} />
+                    <h3 className="text-lg sm:text-xl font-bold text-red-200 tracking-tight">
                       {item.problemTitle}
                     </h3>
                   </div>
 
-                  <p className="mt-3 text-red-200/80 text-sm leading-relaxed pl-9">
+                  <p className="mt-2.5 sm:mt-3 text-red-200/80 text-xs sm:text-sm leading-relaxed pl-0 sm:pl-8">
                     {item.problemDesc}
                   </p>
                 </div>
               </div>
 
-              {/* Arrow badge between the two halves */}
+              {/* Mobile Indicator */}
+              <div className="flex md:hidden items-center justify-center -my-2 z-10">
+                <span className="w-8 h-8 rounded-full bg-slate-950 border border-accent/40 flex items-center justify-center text-accent text-sm shadow-[0_0_15px_rgba(45,212,191,0.25)]">
+                  ↓
+                </span>
+              </div>
+
+              {/* Desktop Arrow badge between the two halves */}
               <div className="hidden md:flex items-center justify-center -mx-9 z-10">
                 <motion.span
                   animate={{ x: [0, 4, 0] }}
@@ -92,7 +99,7 @@ export default function ProblemSolution() {
               </div>
 
               {/* Solution Container */}
-              <div className="flex-1 flex flex-col justify-between text-teal-100 bg-gradient-to-br from-accent/15 to-accent/5 p-6 rounded-2xl border border-accent/25">
+              <div className="flex-1 flex flex-col justify-between text-teal-100 bg-gradient-to-br from-accent/15 to-accent/5 p-4 sm:p-6 rounded-xl sm:rounded-2xl border border-accent/25">
                 <div>
                   <div className="flex items-center justify-between gap-3 mb-3">
                     <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-accent/20 text-accent border border-accent/40">
@@ -104,13 +111,13 @@ export default function ProblemSolution() {
                   </div>
 
                   <div className="flex items-start gap-3 mt-2">
-                    <CheckCircle2 className="shrink-0 mt-0.5 text-accent" size={24} />
-                    <h3 className="text-xl font-bold text-white tracking-tight">
+                    <CheckCircle2 className="shrink-0 mt-0.5 text-accent" size={22} />
+                    <h3 className="text-lg sm:text-xl font-bold text-white tracking-tight">
                       {item.solutionTitle}
                     </h3>
                   </div>
 
-                  <p className="mt-3 text-slate-300 text-sm leading-relaxed pl-9">
+                  <p className="mt-2.5 sm:mt-3 text-slate-300 text-xs sm:text-sm leading-relaxed pl-0 sm:pl-8">
                     {item.solutionDesc}
                   </p>
                 </div>
